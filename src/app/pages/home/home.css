@@ -1,0 +1,160 @@
+/* Main container */
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: #d8c3c3; /* pure black */
+  color: rgb(36, 34, 34);
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero section */
+.hero {
+  background: transparent; /* no border, black only */
+  padding: 60px 20px;
+}
+
+/* Main title */
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Highlight name */
+.highlight {
+  color: #7e5151;
+  text-shadow: 0 0 10px rgb(179, 154, 154);
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.primary {
+  background-color: #4bca31;
+  color: black;
+}
+
+.primary:hover {
+  background-color: #38a823;
+  transform: translateY(-3px);
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid #4bca31;
+  color: #4bca31;
+}
+
+.secondary:hover {
+  background: #4bca31;
+  color: black;
+  transform: translateY(-3px);
+}
+
+/* ================= PROJECTS ================= */
+.projects-section {
+  padding: 40px 20px;
+  background: transparent; /* black background inherited */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #7e5151;
+  margin-bottom: 40px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* CARD STYLE */
+.card {
+  background: #e9adad;          /* dark gray card */
+  padding: 25px;
+  width: 280px;
+  border-radius: 15px;
+  border: 2px solid rgb(216, 216, 216);      /* white border around cards only */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(183, 184, 183, 0.4);
+  border-color: #ffffff; /* optional: neon effect on hover */
+}
+
+.card h3 {
+  color: #7e5151;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.card-btn {
+  background: #d17a17;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.card-btn:hover {
+  background: #f07007;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
