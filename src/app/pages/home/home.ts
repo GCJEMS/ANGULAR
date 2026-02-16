@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
+import { NavbarComponent } from '../../components/navbar/navbar';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [
+    NavbarComponent, // import Navbar here
+    RouterOutlet
+  ],
   templateUrl: './home.html',
-  styleUrl: './home.css',
+  styleUrls: ['./home.css']
 })
-export class Home {
-  name = 'James Andre Sinining';
+export class HomeComponent {
+  name = 'JAMES ANDRE SININING';
 }

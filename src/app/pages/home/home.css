@@ -1,17 +1,21 @@
-/* Main container */
 :host {
   display: block;
   min-height: 100vh;
-  background-color: #d8c3c3; /* pure black */
-  color: rgb(36, 34, 34);
+  margin-top: 5px;
+  background-color: #3f3e3e; /* light gray */
+  border-color: #f07007;
+  border-radius: 58px;
   padding: 60px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 /* Hero section */
 .hero {
   background: transparent; /* no border, black only */
   padding: 60px 20px;
+}
+.body {
+  background-color: #292929; /* black background inherited */
+  padding: 20px;
 }
 
 /* Main title */
@@ -20,11 +24,12 @@
   font-weight: 700;
   margin-bottom: 15px;
   text-align: center;
+  color: #faa303de;
 }
 
 /* Highlight name */
 .highlight {
-  color: #7e5151;
+  color: #ffffff;
   text-shadow: 0 0 10px rgb(179, 154, 154);
 }
 
@@ -36,6 +41,7 @@
   text-align: center;
   opacity: 0.9;
   line-height: 1.5;
+  color: #ffffff;
 }
 
 /* Buttons */
@@ -56,30 +62,6 @@
   transition: all 0.3s ease;
   font-weight: 600;
 }
-
-.primary {
-  background-color: #4bca31;
-  color: black;
-}
-
-.primary:hover {
-  background-color: #38a823;
-  transform: translateY(-3px);
-}
-
-.secondary {
-  background: transparent;
-  border: 2px solid #4bca31;
-  color: #4bca31;
-}
-
-.secondary:hover {
-  background: #4bca31;
-  color: black;
-  transform: translateY(-3px);
-}
-
-/* ================= PROJECTS ================= */
 .projects-section {
   padding: 40px 20px;
   background: transparent; /* black background inherited */
@@ -88,7 +70,7 @@
 .section-title {
   text-align: center;
   font-size: 2rem;
-  color: #7e5151;
+  color: #f7f7f7;
   margin-bottom: 40px;
 }
 
@@ -101,7 +83,7 @@
 
 /* CARD STYLE */
 .card {
-  background: #e9adad;          /* dark gray card */
+  background-color: #292929;          /* dark gray card */
   padding: 25px;
   width: 280px;
   border-radius: 15px;
@@ -118,7 +100,7 @@
 }
 
 .card h3 {
-  color: #7e5151;
+  color: #ffffff;
   margin-bottom: 10px;
   font-size: 1.2rem;
 }
@@ -128,10 +110,11 @@
   opacity: 0.8;
   margin-bottom: 15px;
   line-height: 1.4;
+  color: #ffffff;
 }
 
 .card-btn {
-  background: #d17a17;
+  background: #dd9860;
   border: none;
   padding: 8px 18px;
   border-radius: 20px;
