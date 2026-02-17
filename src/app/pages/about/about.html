@@ -1,4 +1,71 @@
-<section class="about">
-  <h1>About Me</h1>
-  <p>{{ description }}</p>
-</section>
+<article class="about-page">
+  <!-- Hero -->
+  <header class="hero">
+    <p class="hero-label">About</p>
+    <h1 class="title">
+      Hi, I'm <span class="highlight">{{ name }}</span>
+    </h1>
+    <p class="subtitle">{{ tagline }}</p>
+    <p class="hero-desc">{{ description }}</p>
+  </header>
+
+  <!-- About me -->
+  <section class="about-section" aria-labelledby="about-heading">
+    <h2 id="about-heading" class="section-title">About me</h2>
+    <p class="section-intro">What I do and how I work.</p>
+    <div class="about-grid">
+      <div class="about-card about-card--who">
+        <span class="about-card-icon" aria-hidden="true"></span>
+        <h3>Who I am</h3>
+        <p>{{ description }}</p>
+      </div>
+      <div class="about-card about-card--skills">
+        <span class="about-card-icon" aria-hidden="true"></span>
+        <h3>Skills</h3>
+        <ul class="skills-list">
+          @for (skill of skills; track skill) {
+            <li>{{ skill }}</li>
+          }
+        </ul>
+      </div>
+      @for (item of focusItems; track item.title) {
+        <div class="about-card">
+          <span class="about-card-icon" aria-hidden="true">
+            <img src="/icon/alad.jpg" alt="User Icon">
+          </span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects-section" aria-labelledby="projects-heading">
+    <h2 id="projects-heading" class="section-title">Projects</h2>
+    <p class="section-intro">A selection of recent work.</p>
+    <div class="projects">
+      @for (project of projects; track project.title) {
+        <div class="card">
+          <div class="card-image" aria-hidden="true"></div>
+          <div class="card-content">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <button type="button" class="card-btn">View details</button>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <p class="cta-text">Want to work together?</p>
+    <a routerLink="/contact" class="cta-btn">Get in touch</a>
+  </section>
+
+  <footer class="footer">
+    <p class="footer-text">&copy; {{ year }} {{ name }}. All rights reserved.</p>
+    <p class="footer-tagline">Built with Angular</p>
+  </footer>
+</article>

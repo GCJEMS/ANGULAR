@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  templateUrl: './navbar.html',  // must match file name
-  styleUrls: ['./navbar.css'],    // optional
-
+  imports: [RouterLink, RouterLinkActive],
+  templateUrl: './navbar.html',
+  styleUrls: ['./navbar.css'],
 })
-export class NavbarComponent { 
-}
+export class NavbarComponent {}
+
