@@ -1,14 +1,22 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, NavbarComponent],
   templateUrl: './app.html',
-  styleUrls: ['./app.css']
+  styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('JAS-APP');
+export class App implements OnInit {
+
+  ngOnInit() {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }
+
 }

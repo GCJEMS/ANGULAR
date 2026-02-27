@@ -1,40 +1,45 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './about.html',
-  styleUrls: ['./about.css'],
+  styleUrl: './about.css'
 })
 export class AboutComponent {
-  name = 'James Andre Sinining';
-  tagline = 'Developer focused on modern web applications.';
-  description =
-    'I build modern and responsive web applications using Angular and TypeScript, with a focus on clean code and great user experience.';
-  email = 'your.email@example.com';
-  location = 'Philippines';
-  year = new Date().getFullYear();
 
-  skills: string[] = [
-    'Angular',
-    'TypeScript',
-    'HTML & CSS',
-    'JavaScript',
-    'PHP',
-    'Git',
+  skills = [
+    {
+      title: 'Angular',
+      image: 'images/angular.png',
+      description: 'Building dynamic and scalable frontend applications.'
+    },
+    {
+      title: 'NestJS',
+      image: 'images/nestjs.png',
+      description: 'Creating powerful backend APIs with modular architecture.'
+    },
+    {
+      title: 'TypeScript',
+      image: 'images/typescript.png',
+      description: 'Writing clean and maintainable strongly-typed code.'
+    },
+    {
+      title: 'REST APIs',
+      image: 'images/api.png',
+      description: 'Designing secure and scalable backend services.'
+    },
+    {
+      title: 'Database',
+      image: 'images/database.png',
+      description: 'Working with MySQL and PostgreSQL.'
+    },
+    {
+      title: 'UI/UX Design',
+      image: 'images/uiux.png',
+      description: 'Crafting modern interfaces using TailwindCSS.'
+    }
   ];
 
-  focusItems: { title: string; text: string }[] = [
-    { title: 'Modern web apps', text: 'Single-page applications and responsive interfaces.' },
-    { title: 'Clean code', text: 'Maintainable, readable, and well-structured codebases.' },
-    { title: 'User experience', text: 'Fast, accessible, and intuitive products.' },
-  ];
-
-  projects: { title: string; description: string }[] = [
-    { title: 'Portfolio site', description: 'Modern Angular portfolio with responsive design.' },
-    { title: 'Scholarship system', description: 'Online Scholarship Application System built with PHP.' },
-    { title: 'Student dashboard', description: 'Dashboard with CRUD and reporting features.' },
-  ];
 }

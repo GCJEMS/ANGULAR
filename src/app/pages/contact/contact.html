@@ -1,46 +1,33 @@
-<article class="contact-page">
-  <!-- Hero -->
-  <header class="hero">
-    <p class="hero-label">Contact</p>
-    <h1 class="title">
-      Get in <span class="highlight">touch</span>
-    </h1>
-    <p class="subtitle">{{ name }}</p>
-    <p class="hero-desc">
-      Have a project in mind or want to collaborate? Send an email or say hello.
-    </p>
-  </header>
+<section class="pt-20 min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="bg-white shadow-xl rounded-2xl p-10 w-full max-w-md">
 
-  <!-- Contact info -->
-  <section class="contact-section" aria-labelledby="contact-heading">
-    <h2 id="contact-heading" class="section-title">Contact info</h2>
-    <p class="section-intro">{{ responseTime }}</p>
-    <div class="contact-grid">
-      @for (item of contactItems; track item.label) {
-        <div class="contact-card">
-          <span class="contact-card-icon" aria-hidden="true"></span>
-          <h3>{{ item.label }}</h3>
-          @if (item.type === 'email') {
-            <a [href]="mailtoUrl" class="contact-link contact-link--email">{{ item.value }}</a>
-          } @else {
-            <p class="contact-value">{{ item.value }}</p>
-          }
-        </div>
-      }
-    </div>
-    <div class="contact-cta">
-      <a [href]="mailtoUrl" class="cta-btn">Send an email</a>
-    </div>
-  </section>
+    <h1 class="text-3xl font-bold mb-6 text-center">Contact Me</h1>
 
-  <!-- CTA to About -->
-  <section class="cta-section">
-    <p class="cta-text">Want to know more about my work?</p>
-    <a routerLink="/about" class="cta-btn cta-btn--outline">View about</a>
-  </section>
+    <form class="flex flex-col gap-4">
+      <input 
+        type="text" 
+        placeholder="Your Name"
+        class="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+      />
 
-  <footer class="footer">
-    <p class="footer-text">&copy; {{ year }} {{ name }}. All rights reserved.</p>
-    <p class="footer-tagline">Built with Angular</p>
-  </footer>
-</article>
+      <input 
+        type="email" 
+        placeholder="Your Email"
+        class="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+      />
+
+      <textarea 
+        rows="4"
+        placeholder="Your Message"
+        class="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+      ></textarea>
+
+      <button 
+        type="submit"
+        class="bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition">
+        Send Message
+      </button>
+    </form>
+
+  </div>
+</section>

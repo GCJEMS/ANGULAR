@@ -4,11 +4,11 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })
-export class Contact {
+export class ContactComponent {
   name = 'James Andre Sinining';
   email = 'Jamesandreduazo@gmail.com';
   location = 'Cebu City,Philippines';

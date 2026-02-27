@@ -1,12 +1,19 @@
 // src/main.ts
-import '@angular/compiler'; // required for JIT in dev
+import '@angular/compiler';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { App } from './app/app';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { routes } from './app/app.routes';
 
 bootstrapApplication(App, {
-  providers: [provideRouter(routes)]
+  providers: [
+    provideRouter(
+      routes,
+      withInMemoryScrolling({
+        anchorScrolling: 'enabled',
+        scrollPositionRestoration: 'enabled',
+      })
+    )
+  ]
 })
 .catch(err => console.error(err));
- 

@@ -1,9 +1,33 @@
-<nav class="navbar">
-  <h2><a routerLink="/home" routerLinkActive="active" class="logo-link">LOGO</a></h2>
-  <ul>
-    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
-  </ul>
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<nav class="fixed top-0 w-full bg-black text-white p-4 shadow-md z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+    
+    <!-- Logo -->
+    <h1 class="text-xl font-bold">MyPortfolio</h1>
+
+    <!-- Links -->
+    <div class="flex gap-6">
+      <button
+        type="button"
+        (click)="scrollTo('home')"
+        class="bg-transparent border-none cursor-pointer text-white hover:text-blue-400 transition-colors transform duration-200 hover:-translate-y-0.5 active:scale-95"
+      >
+        Home
+      </button>
+      <button
+        type="button"
+        (click)="scrollTo('about')"
+        class="bg-transparent border-none cursor-pointer text-white hover:text-blue-400 transition-colors transform duration-200 hover:-translate-y-0.5 active:scale-95"
+      >
+        About
+      </button>
+      <button
+        type="button"
+        (click)="scrollTo('contact')"
+        class="bg-transparent border-none cursor-pointer text-white hover:text-blue-400 transition-colors transform duration-200 hover:-translate-y-0.5 active:scale-95"
+      >
+        Contact
+      </button>
+    </div>
+
+  </div>
 </nav>
